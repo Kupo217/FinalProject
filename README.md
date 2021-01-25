@@ -1,2 +1,2 @@
 # FinalProject
-This a mobile app project for the first Exam.(BTU)
+This is a mobile app project for the first Exam.(BTU)
