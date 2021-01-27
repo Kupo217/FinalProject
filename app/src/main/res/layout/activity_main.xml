@@ -8,15 +8,68 @@
     android:background="@drawable/authentication">
 
     <TextView
-        android:fontFamily="@font/arial"
-        android:textColor="@color/white"
-        android:textSize="50sp"
+        android:paddingTop="70dp"
+        android:paddingLeft="45dp"
+        android:id="@+id/welcome_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/arial"
+        android:text="WELCOME!"
+        android:textColor="@color/white"
+        android:textSize="52sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:paddingLeft="45dp"
+        android:id="@+id/nice_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arial"
+        android:text="NICE TO SEE YOU HERE!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/arial"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/nice_text_view"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/if_text_view"
+        android:paddingLeft="14dp"
+        android:fontFamily="@font/arial"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If you aren't registered , please"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="23dp"/>
+
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/if_text_view"
+        android:id="@+id/sign_up_text_view"
+        android:paddingLeft="7dp"
+        android:fontFamily="@font/arial"
+        android:textColor="#FF5D5D"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="23dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
