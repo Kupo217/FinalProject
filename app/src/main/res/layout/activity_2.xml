@@ -4,79 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".2activity"
+    tools:context=".SignInActivity"
     android:background="@color/white">
 
     <TextView
         android:id="@+id/hello_text_view"
-        android:paddingTop="155dp"
-        android:paddingLeft="45dp"
         android:fontFamily="@font/arial"
         android:textColor="@color/black"
         android:textSize="45sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello There!"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/email_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="78dp"/>
 
     <EditText
         android:id="@+id/email_edit_text"
         android:layout_width="300dp"
         android:layout_height="35sp"
-        android:layout_marginTop="60dp"
         android:background="@drawable/button1"
         android:fontFamily="@font/arial"
         android:hint="@string/email"
         android:paddingLeft="24dp"
         android:textColorHint="@color/black"
         app:layout_constraintTop_toBottomOf="@id/hello_text_view"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="46dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pass_edit_text"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
 
         android:id="@+id/pass_edit_text"
         android:layout_width="300dp"
         android:layout_height="35sp"
-        android:layout_marginTop="56dp"
         android:background="@drawable/button1"
         android:fontFamily="@font/arial"
         android:hint="@string/password"
         android:paddingLeft="24dp"
         android:textColorHint="@color/black"
         app:layout_constraintTop_toBottomOf="@id/email_edit_text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="46dp" />
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="52dp"
         android:background="@drawable/button"
         android:fontFamily="@font/arial"
         android:text="LOGIN"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/pass_edit_text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="46dp" />
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/if_text_view"
+        android:layout_marginRight="198dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/if_text_view"
-        android:paddingLeft="14dp"
+        android:paddingLeft="10dp"
         android:fontFamily="@font/arial"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="If you aren't registered , please"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="23dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sign_up1"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         app:layout_constraintStart_toEndOf="@id/if_text_view"
-        android:id="@+id/sign_up_text_view"
+        android:id="@+id/sign_up1"
         android:paddingLeft="7dp"
         android:fontFamily="@font/arial"
         android:textColor="#FF5D5D"
@@ -84,8 +99,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="23dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+       android:layout_marginTop="240dp"
+        android:layout_marginRight="23dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
